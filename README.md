@@ -1,28 +1,36 @@
 # Sudoku Solver
 
-A Python Sudoku solver that uses backtracking to solve 9x9 Sudoku puzzles.
+A Python Sudoku solver using Algorithm X and exact-cover constraint modeling.
 
 ## Overview
 
-This project solves standard 9x9 Sudoku puzzles by searching for empty cells, checking valid placements, and recursively backtracking when a conflict is found.
+This project models a standard 9x9 Sudoku puzzle as an exact-cover problem. Each possible placement of a number must satisfy four constraints:
+
+- Each cell contains one number
+- Each row contains each number once
+- Each column contains each number once
+- Each 3x3 box contains each number once
+
+The solver uses Algorithm X to search for a set of placements that satisfies every constraint.
 
 ## Features
 
-- Solves 9x9 Sudoku puzzles
-- Uses recursive backtracking
+- Solves standard 9x9 Sudoku puzzles
+- Uses Algorithm X
+- Models Sudoku as an exact-cover problem
 - Validates rows, columns, and 3x3 boxes
-- Written in Python
+- Accepts `0` or `.` for empty cells
+- Includes automated tests
 
 ## Technologies
 
 - Python
+- Algorithm X
+- Exact Cover
+- Constraint Solving
 - Recursion
-- Backtracking
-- Constraint checking
 
-## What I Learned
+## Run
 
-- Recursive problem solving
-- Backtracking algorithms
-- Constraint validation
-- Clean puzzle representation in Python
+```bash
+python3 sudoku_solver.py
